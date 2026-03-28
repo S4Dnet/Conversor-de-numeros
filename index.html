@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Conversor de números</title>
+</head>
+<body>
+    <h1>Conversor</h1>
+    <form action="">
+        <div class="form_container">
+            <label for="numero_entrada">Digite o número que será convertido: </label>
+            <input id="numero_entrada" type="text">
+        </div>
+        
+        <div class="form_container selection">
+            <div class="cont_A">
+                <label for="conversor_de">Converter de: </label>
+                <select name="conversor_de" id="conversor_de">
+                    <option value="decimal">Decimal</option>
+                    <option value="binario">Binário</option>
+                    <option value="octal">Octal</option>
+                    <option value="hexadecimal">Hexadecimal</option>
+                </select>
+            </div>
+            <span class="seta">→</span>
+            <div class="cont_B">
+                <label for="conversor_para">Para: </label>
+                <select name="conversor_para" id="conversor_para">
+                    <option value="decimal">Decimal</option>
+                    <option value="binario">Binário</option>
+                    <option value="octal">Octal</option>
+                    <option value="hexadecimal">Hexadecimal</option>
+                </select>
+            </div>
+        </div>
+        
+        <button type="button" id="converter" onclick="convert()">Converter</button>
+        
+        <div class="resultado" id="resultado">
+            <span id="numero_original"></span> em <span id="base_origem"></span> é igual a <span id="numero_convertido"></span> em <span id="base_destino"></span>
+        </div>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
